@@ -1,0 +1,49 @@
+# Xcode
+.DS_Store
+*.xcworkspace
+*.xcuserdata
+xcuserdata/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/composio-swift/.build/
+Packages/composio-swift/.swiftpm/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Secrets & Environment
+.env
+*.xcconfig
+Act/Act/Config/Secrets.swift
+
+# Build outputs
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# IDE
+.vscode/
+.idea/
