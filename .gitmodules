@@ -1,3 +1,4 @@
 [submodule "Packages/composio-swift"]
 	path = Packages/composio-swift
 	url = https://github.com/chabhishek420/composio-swifft.git
+	branch = main
