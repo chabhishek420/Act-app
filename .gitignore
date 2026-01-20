@@ -47,3 +47,9 @@ playground.xcworkspace
 # IDE
 .vscode/
 .idea/
+
+# Temporary files
+.temp/
+
+# Xcode User State (large binary files)
+*.xcuserstate
