@@ -1,95 +1,69 @@
-# Apple OS 26 Template
+# Act - iOS AI Assistant
 
-A SwiftUI template project featuring a modern tabbed interface with sidebar adaptable navigation and web content integration.
-
-<img width="2003" alt="Demo" src="https://github.com/user-attachments/assets/076beba3-0a4b-4fab-b806-e973893224ca" />
+> Execute authenticated actions across 500+ productivity tools via natural language.
 
 ## Overview
 
-This project demonstrates advanced SwiftUI features including:
-- Multi-platform support (iOS, iPadOS, macOS, visionOS, tvOS 26)
-- Adaptive tab view with sidebar functionality
-- Web content integration
-- Modern SwiftUI navigation patterns
-- Custom tab bar accessories
+**Act** is an iOS-native AI assistant built on Composio's Tool Router architecture. It enables users to:
 
-## Features
+- 📧 Send emails via Gmail
+- 💬 Post messages to Slack
+- 📋 Create issues in Linear/GitHub
+- 📝 Update Notion pages
+- ...and 500+ more integrations
 
-### 📱 **Multi-Platform Support**
-- **iOS**: iPhone and iPad optimized interface
-- **macOS**: Native macOS experience
-- **visionOS**: Ready for Apple Vision Pro
-- **tvOS**: Ready for Apple TV
+## Quick Start
 
-### 🎯 **Modern Navigation**
-- **Sidebar Adaptable TabView**: Automatically adapts to different screen sizes
-- **Search Tab**: Dedicated search functionality with searchable interface
-- **Tab Bar Minimization**: Auto-hide on scroll down behavior
-- **Bottom Accessories**: Custom tab bar bottom accessories (iOS 26+ feature)
+1. **Open the project** in Xcode:
+   ```bash
+   open Act.xcodeproj
+   ```
 
-### 🌐 **Web Integration**
-- **WebView Support**: Embedded web content (Note: WebView struct needs implementation)
-- **Apple.com Integration**: Example web content loading
+2. **Select an iOS Simulator** (e.g., iPhone 15) from the destination picker in the Xcode toolbar.
 
-### 🛠 **App Structure**
-- **Clean Architecture**: Separated concerns with dedicated files
-- **SwiftUI Best Practices**: Modern SwiftUI patterns and conventions
-- **Xcode 26 Ready**: Uses latest Xcode project format
+3. **Build and run** (⌘R).
+
+*Note: The Composio SDK is already linked as a local package.*
+
+## Architecture
+
+```
+Act iOS App
+    ├── ChatView (SwiftUI)
+    ├── ChatViewModel (@Observable)
+    ├── SessionManager (actor)
+    └── Composio Swift SDK
+            └── Composio Cloud API (v3)
+```
+
+## Documentation
+
+All documentation is in the [`docs/`](./docs/) directory. **For autonomous implementation, start with the [Master Plan](./docs/BUILD_ORCHESTRATOR.md).**
+
+| Category | Purpose |
+|----------|---------|
+| [**BUILD_ORCHESTRATOR.md**](./docs/BUILD_ORCHESTRATOR.md) | **Master Implementation Plan (Start Here)** |
+| [SPEC.md](./docs/SPEC.md) | Technical specification |
+
+| [architecture/](./docs/architecture/) | System design |
+| [api/](./docs/api/) | Composio SDK integration |
+| [design/](./docs/design/) | SwiftUI and UX |
+| [data/](./docs/data/) | Database and security |
+| [ops/](./docs/ops/) | DevOps and testing |
 
 ## Requirements
 
-- **Xcode**: 26.0 or later
-- **iOS**: 26.0 or later
-- **macOS**: 26.0 or later
-- **visionOS**: 26.0 or later
-- **tvOS**: 26.0 or later
+- **Xcode** 16.0+ (iOS 26 SDK for Liquid Glass)
+- **iOS** 17.0+ deployment target
+- **Swift** 5.9+
 
-## Installation
+## Dependencies
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/1998code/Apple-OS-26-Template
-   cd Template
-   ```
-
-2. Open the project in Xcode:
-   ```bash
-   open Template.xcodeproj
-   ```
-
-3. Build and run the project on your desired platform.
-
-## Project Structure
-
-```
-Template/
-├── Template/
-│   ├── TemplateApp.swift      # Main app entry point
-│   ├── ContentView.swift      # Main content view with tab interface
-│   └── Assets.xcassets/       # App assets and icons
-├── Template.xcodeproj/        # Xcode project file
-└── README.md                  # This file
-```
-
-## Getting Started
-
-1. **Replace Placeholder Views**: Update the placeholder `Text("View X")` with your custom SwiftUI views
-2. **Implement WebView**: Add the WebView struct if you need web content
-3. **Customize Tabs**: Modify tab icons, labels, and content to match your app's purpose
-4. **Configure Bundle ID**: Update the bundle identifier in project settings
-5. **Add App Icon**: Replace the default app icon in Assets.xcassets
-
-## Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+| Package | Purpose |
+|---------|---------|
+| [composio-swift](../composio-swift/) | Composio API client |
+| [MacPaw/OpenAI](https://github.com/MacPaw/OpenAI) | OpenAI API client |
 
 ## License
 
-This project is available as a template for your own projects. Modify and use as needed.
-
-## Previous SwiftUI Template
-https://github.com/1998code/iOS16-Live-Activities
+Proprietary - All rights reserved.
