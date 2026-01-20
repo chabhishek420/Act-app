@@ -613,7 +613,7 @@
 /* Begin XCLocalSwiftPackageReference section */
 		E95D5CE634604183BEF17A45 /* Composio */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../composio-swift;
+			relativePath = ../Packages/composio-swift;
 		};
 /* End XCLocalSwiftPackageReference section */
 
